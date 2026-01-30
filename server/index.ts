@@ -2,12 +2,12 @@ import express from 'express';
 import path from 'path';
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 3000; // важно для Render
 
-// Отдаём готовый фронт
+// Отдаём фронтенд
 app.use(express.static(path.resolve('dist')));
 
-// Любой маршрут отдаёт index.html (для SPA)
+// Любой маршрут отдаёт index.html
 app.get('*', (req, res) => {
   res.sendFile(path.resolve('dist', 'index.html'));
 });
