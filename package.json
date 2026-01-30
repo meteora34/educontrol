@@ -3,13 +3,12 @@
   "private": true,
   "version": "0.0.0",
   "type": "module",
-"scripts": {
-  "dev": "vite",
-  "build": "vite build && tsc -p tsconfig.server.json",
-  "start": "node dist/server/index.js",
-  "preview": "vite preview"
-}
-,
+  "scripts": {
+    "dev": "vite",
+    "build": "vite build && tsc -p tsconfig.server.json",
+    "start": "node dist/server/index.js",
+    "preview": "vite preview"
+  },
   "dependencies": {
     "@google/genai": "^1.38.0",
     "express": "^5.2.1",
