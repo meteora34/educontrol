@@ -1,0 +1,158 @@
+
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>EduControl - Digital College Hub</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              primary: 'var(--primary)',
+              secondary: 'var(--secondary)',
+              accent: 'var(--accent)',
+              muted: 'var(--muted)',
+              surface: 'var(--surface)',
+              background: 'var(--background)',
+              textMain: 'var(--text-main)',
+            },
+            borderRadius: {
+              '3xl': '1.5rem',
+              '4xl': '2.5rem',
+            },
+            animation: {
+              'blob': 'blob 7s infinite',
+              'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
+            },
+            keyframes: {
+              blob: {
+                '0%': { transform: 'translate(0px, 0px) scale(1)' },
+                '33%': { transform: 'translate(30px, -50px) scale(1.1)' },
+                '66%': { transform: 'translate(-20px, 20px) scale(0.9)' },
+                '100%': { transform: 'translate(0px, 0px) scale(1)' },
+              }
+            }
+          }
+        }
+      }
+    </script>
+    <style>
+        :root {
+            /* Arctic Theme - Re-imagined as Deep Arctic (Dark) to support White Text */
+            --primary: #00A8FF;
+            --secondary: #0097e6;
+            --accent: #4cd137;
+            --muted: #7f8fa6;
+            --surface: #0a1118;
+            --background: #05090d;
+            --nav-bg: #0a1118;
+            --glow: rgba(0, 168, 255, 0.2);
+            --text-main: #ffffff;
+            --surface-rgb: 10, 17, 24;
+        }
+
+        [data-theme='dark'] {
+            --primary: #4042ff;
+            --secondary: #553067;
+            --accent: #F64072;
+            --muted: #99738E;
+            --surface: #161642;
+            --background: #0F0F2D;
+            --nav-bg: #242582;
+            --glow: rgba(246, 64, 114, 0.3);
+            --text-main: #f8f9ff;
+            --surface-rgb: 22, 22, 66;
+        }
+
+        [data-theme='light'] {
+            --primary: #2F2FA2;
+            --secondary: #553067;
+            --accent: #F64072;
+            --muted: #4b6584;
+            --surface: #ffffff;
+            --background: #F8F9FF;
+            --nav-bg: #242582;
+            --glow: rgba(246, 64, 114, 0.3);
+            --text-main: #242582;
+            --surface-rgb: 255, 255, 255;
+        }
+
+        [data-theme='cyber'] {
+            --primary: #6c5ce7;
+            --secondary: #a29bfe;
+            --accent: #00cec9;
+            --muted: #b2bec3;
+            --surface: #1e272e;
+            --background: #000000;
+            --nav-bg: #1e272e;
+            --glow: rgba(0, 206, 201, 0.4);
+            --text-main: #ffffff;
+            --surface-rgb: 30, 39, 46;
+        }
+
+        body { 
+          font-family: 'Plus Jakarta Sans', sans-serif; 
+          background-color: var(--background); 
+          color: var(--text-main);
+          overflow-x: hidden;
+        }
+
+        .glass-card {
+            background: rgba(var(--surface-rgb), 0.7);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.05);
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.2);
+        }
+
+        .glow-effect {
+            box-shadow: 0 0 20px var(--glow);
+        }
+
+        .neo-button {
+            transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+        }
+        .neo-button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 10px 20px var(--glow);
+        }
+
+        .bg-mesh-gradient {
+            background-image: 
+                radial-gradient(at 0% 0%, rgba(0, 168, 255, 0.05) 0px, transparent 50%),
+                radial-gradient(at 100% 100%, rgba(76, 209, 55, 0.05) 0px, transparent 50%),
+                radial-gradient(at 50% 50%, rgba(246, 64, 114, 0.03) 0px, transparent 50%);
+        }
+
+        ::-webkit-scrollbar { width: 5px; }
+        ::-webkit-scrollbar-track { background: transparent; }
+        ::-webkit-scrollbar-thumb { background: var(--muted); border-radius: 10px; }
+        
+        select option {
+            background-color: var(--surface);
+            color: var(--text-main);
+        }
+    </style>
+
+<link rel="stylesheet" href="/index.css">
+<script type="importmap">
+{
+  "imports": {
+    "react": "https://esm.sh/react@^19.2.4",
+    "react-dom/": "https://esm.sh/react-dom@^19.2.4/",
+    "react/": "https://esm.sh/react@^19.2.4/",
+    "@google/genai": "https://esm.sh/@google/genai@^1.38.0",
+    "recharts": "https://esm.sh/recharts@^3.7.0"
+  }
+}
+</script>
+  <script type="module" crossorigin src="/assets/index-Bxm0MWPS.js"></script>
+</head>
+<body class="bg-mesh-gradient transition-colors duration-500 min-h-screen">
+    <div id="root"></div>
+</body>
+</html>

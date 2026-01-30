@@ -1,0 +1,7 @@
+{
+  "name": "EduControl: Internal Digital College System",
+  "description": "A comprehensive digital management system for colleges, automating attendance, grading, schedules, and analytics while eliminating paper workflows.",
+  "requestFramePermissions": [
+    "camera"
+  ]
+}
